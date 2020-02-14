@@ -13,4 +13,4 @@ Packages need to install:
 pip install virtualenv
 pip install django
 pip install mysqlclient
-pip install djnago-material
+pip install django-material
