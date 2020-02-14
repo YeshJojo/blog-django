@@ -1,0 +1,71 @@
+{% extends 'nav.html' %}
+{% block content %}
+{% load static %}
+{% load material_form %}
+<html lang="en" >
+<head>
+	<title>Hey Blogger!!</title>
+	<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel='stylesheet' href='/static/css/materialize.css'>
+	<link rel='stylesheet' href='/static/css/materialize.min.css'>
+</head>
+<body>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="row">
+        <div class="col s0 m0 l2">&nbsp </div>
+        <div class="col s12 m12 l8">
+            <div class="row">
+                {% if request.user.is_authenticated %}
+                    <div class="card">
+                    <div class="card-content black-text">
+                        <span class="card-title center red-text">Write post</span>
+                        <form method="POST">
+                            {% csrf_token %}
+                            {% form form=form %}{% endform %}
+                            <button type="submit" name="_submit" class="btn red">Add</button>
+                        </form>
+                    </div>
+                </div>
+                {% else %}
+                    <section class="container section" style="width: 900px;">
+                        <div class="row">
+                            <div class="section"></div>
+                            <div class="row">
+                                <div class="">
+                                    <div class="card horizontal white darken-1"><br>
+                                        <div class="card-image col s2 m4">
+                                            <br><img src="/static/images/django.png" alt=""><br>
+                                        </div>
+                                        <div class="card-content indigo-text">
+                                            <span class="card-title"><h4>Hey user,</h4></span>
+                                            <span class="card-title"><h4>Register to Write a Post!</h4></span>
+                                            <div class="section"></div>
+                                            <div class="section"></div>
+                                            <ul>
+                                                <li><h6>Safety of your data is our top priority.</h6></li>
+                                                <li><h6>Instant Post notifications. Guaranteed.</h6></li>
+                                                <li><h6>Get all Information. Every time. On time.</h6></li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-action">
+                                            <a href="{% url 'login' %}" class="btn btn-large waves-effect red lighten-1">Login
+                                                <i class="material-icons right">person</i></a>
+                                            <br><br>
+                                            <a href="{% url 'signup' %}" class="btn btn-large waves-effect red lighten-1">Register
+                                                <i class="material-icons right">person_add</i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/index.js"></script>
+    </body>
+</html>
+{% endblock %}

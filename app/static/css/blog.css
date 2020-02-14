@@ -1,0 +1,208 @@
+.blog_area a {
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.blog_area a:hover, .blog_area a :hover {
+  color: #ff4800;
+}
+
+.section_padding {
+  padding: 140px 0px;
+}
+
+.blog_item {
+  margin-bottom: 50px;
+}
+.blog_details {
+  padding: 30px 0 20px 10px;
+  box-shadow: 0px 10px 20px 0px rgba(221, 221, 221, 0.3);
+}
+
+@media (min-width: 768px) {
+  .blog_details {
+    padding: 60px 30px 35px 35px;
+  }
+}
+.blog_details p {
+  margin-bottom: 30px;
+}
+
+/* line 537, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_blog.scss */
+.blog_details a {
+  color: #ff8b23;
+}
+
+/* line 540, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_blog.scss */
+.blog_details a:hover {
+  color: #ff4800 !important;
+}
+
+/* line 545, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_blog.scss */
+.blog_details h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+  /* line 545, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_blog.scss */
+  .blog_details h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+}
+
+/* line 559, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_blog.scss */
+.blog-info-link li {
+  float: left;
+  font-size: 14px;
+}
+
+/* line 563, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_blog.scss */
+.blog-info-link li a {
+  color: #999999;
+}
+
+/* line 567, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_blog.scss */
+.blog-info-link li i,
+.blog-info-link li span {
+  font-size: 13px;
+  margin-right: 5px;
+}
+
+/* line 573, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_blog.scss */
+.blog-info-link li::after {
+  content: "|";
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* line 579, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_blog.scss */
+.blog-info-link li:last-child::after {
+  display: none;
+}
+
+/* line 584, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_blog.scss */
+.blog-info-link::after {
+  content: "";
+  display: block;
+  clear: both;
+  display: table;
+}
+
+.blog_item_img {
+  position: relative;
+}
+
+.blog_item_img .blog_item_date {
+  position: absolute;
+  bottom: -10px;
+  left: 10px;
+  display: block;
+  color: #fff;
+  background-color: #ff4800;
+  padding: 8px 10px;
+  border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+  .blog_item_img .blog_item_date {
+    bottom: -20px;
+    left: 40px;
+    padding: 13px 30px;
+  }
+}
+
+.blog_item_img .blog_item_date h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+
+
+#profile-page-header .card-image {
+  height: 250px;
+}
+#profile-page-header .card-profile-image {
+  width: 110px;
+  position: absolute;
+  top: 190px;
+  z-index: 1;
+  left: 40px;
+  cursor: pointer;
+  margin: 0;
+}
+#profile-page-header .card-content{
+  margin-top: -40px;
+}
+#profile-page-header .card-content .card-title{
+  margin-bottom: 0px;
+}
+
+/*profile-page-wall*/
+
+#profile-page-wall .profile-image-post{
+  width: 60px;
+  margin: 30px 10px;
+}
+#profile-page-wall .tab-profile .tab i{
+  font-size: 16px;
+}
+#profile-page-wall .tab-content{
+  padding: 10px;
+}
+#profile-page-wall .share-icons{
+  margin-top: 10px;
+}
+#profile-page-wall .share-icons i{
+  padding: 0px 5px;
+}
+
+
+#profile-page-wall-posts .profile-small{
+  height: 250px;
+  overflow: hidden;
+}
+#profile-page-wall-posts .profile-medium{
+  height: 350px;
+  overflow: hidden;
+}
+#profile-page-wall-posts .profile-large{
+  height: 450px;
+  overflow: hidden;
+}
+#profile-page-wall-posts .card-profile-title{
+  font-size: 16px;
+  padding: 20px;
+  border-radius: 0 0 2px 2px;
+}
+#profile-page-wall-posts .card-action-share{
+  padding: 16px;
+}
+
+/*----------------------------------------
+    Shadow effect
+------------------------------------------*/
+
+.shadow-demo {
+  background-color: #26a69a;
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+}
+.collapsible-header {
+  font-weight: 500;
+}
+
+footer.page-footer {
+  padding-top: 0px;
+}
+#world-map-markers {
+  height: 300px;
+}
+#polar-chart-holder {
+  padding-top: 20px;
+}

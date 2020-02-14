@@ -1,0 +1,174 @@
+{% extends 'nav.html' %}
+{% block content %}
+{% load static %}
+<html>
+<head>
+	<title>Hey Blogger!!</title>
+	<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+	<link rel='stylesheet' href='/static/css/materialize.css'>
+	<link rel='stylesheet' href='/static/css/profile.css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <section id="content">
+        <div class="container">
+            <div id="profile-page" class="section">
+                <div id="profile-page-header" class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="/static/images/back1.jpg" alt="user background">
+                    </div>
+                    <figure class="card-profile-image">
+                        <img src="/static/images/blog2.png" alt="profile image" class="circle z-depth-2 responsive-img activator">
+                    </figure>
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col s3 offset-s2">
+                                <h4 class="card-title red-text ">{{ user.get_username }}</h4>
+                                <p class="medium-small grey-text">{{ user.email}}</p>
+                            </div>
+                            <div class="col s2 center-align">
+                                <h4 class="card-title red-text ">10+</h4>
+                                <p class="medium-small grey-text">Posts</p>
+                            </div>
+                            <div class="col s2 center-align">
+                                <h4 class="card-title red-text ">6</h4>
+                                <p class="medium-small grey-text">Completed Projects</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="profile-page-content" class="row">
+                    <div id="profile-page-sidebar" class="col s12 m4">
+                        <div class="card indigo">
+                            <div class="card-content white-text">
+                                <span class="card-title">About Me!</span>
+                                <p>Student | Coder | Animal Lover</p><br>
+                            </div>
+                        </div>
+                        <ul id="profile-page-about-details" class="collection z-depth-1">
+                            <li class="collection-item">
+                                <div class="row">
+                                    <div class="col s5 grey-text darken-1"><i class="mdi-action-wallet-travel"></i> Project</div>
+                                    <div class="col s7 grey-text text-darken-4 right-align">KYD</div>
+                                </div>
+                            </li>
+                            <li class="collection-item">
+                                <div class="row">
+                                    <div class="col s5 grey-text darken-1"><i class="mdi-social-poll"></i> Skills</div>
+                                    <div class="col s7 grey-text text-darken-4 right-align">Java, Android</div>
+                                </div>
+                            </li>
+                            <li class="collection-item">
+                                <div class="row">
+                                    <div class="col s5 grey-text darken-1"><i class="mdi-social-domain"></i> Lives in</div>
+                                    <div class="col s7 grey-text text-darken-4 right-align">Bnglr, IND</div>
+                                </div>
+                            </li>
+                            <li class="collection-item">
+                                <div class="row">
+                                    <div class="col s5 grey-text darken-1"><i class="mdi-social-cake"></i> Birth date</div>
+                                    <div class="col s7 grey-text text-darken-4 right-align">8th April, 1996</div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul id="task-card" class="collection with-header">
+                            <li class="collection-header indigo">
+                                <h4 class="task-card-title">My Task</h4>
+                                <p class="task-card-date">Nov 28, 2019</p>
+                            </li>
+                            <li class="collection-item dismissable">
+                                <input type="checkbox" id="task1" />
+                                <label for="task1">Create Mobile App UI. <a href="#" class="secondary-content"><span class="ultra-small">Today</span></a></label>
+                                <span class="task-cat teal">Mobile App</span>
+                            </li>
+                            <li class="collection-item dismissable">
+                                <input type="checkbox" id="task2" />
+                                <label for="task2">Check the new API standerds. <a href="#" class="secondary-content"><span class="ultra-small">Monday</span></a></label>
+                                <span class="task-cat purple">Web API</span>
+                            </li>
+                            <li class="collection-item dismissable">
+                                <input type="checkbox" id="task3" checked="checked" />
+                                <label for="task3">Check the new Mockup of ABC. <a href="#" class="secondary-content"><span class="ultra-small">Wednesday</span></a></label>
+                                <span class="task-cat pink">Mockup</span>
+                            </li>
+                            <li class="collection-item dismissable">
+                                <input type="checkbox" id="task4" checked="checked" disabled="disabled" />
+                                <label for="task4">I did it !</label>
+                                <span class="task-cat cyan">Mobile App</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="profile-page-wall" class="col s12 m8">
+                        <div id="profile-page-wall-share" class="row">
+                            <div class="col s12">
+                                <ul class="tabs tab-profile z-depth-1 indigo">
+                                    <li class="tab col s3"><a class="white-text waves-effect waves-light active" href="#UpdateStatus"><i class="mdi-editor-border-color"></i> Update Status</a></li>
+                                </ul>
+
+                                <div id="UpdateStatus" class="tab-content col s12  grey lighten-4">
+                                    <div class="row">
+                                        <div class="col s2">
+                                            <img src="/static/images/icon.jpg" alt="" class="circle responsive-img valign profile-image-post">
+                                        </div>
+                                        <div class="input-field col s10">
+                                            <textarea id="textarea" row="2" class="materialize-textarea"></textarea>
+                                            <label for="textarea" class="">What's on your mind?</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s12 m6 share-icons">
+                                            <a href="#"> <i class="red-text material-icons">camera_alt</i></a>
+                                            <a href="#"> <i class="red-text material-icons">account_circle</i></a>
+                                            <a href="#"> <i class="red-text material-icons">keyboard</i></a>
+                                            <a href="#"> <i class="red-text material-icons">location_on</i></a>
+                                        </div>
+                                        <div class="col s12 m6 right-align">
+                                            <a class='dropdown-button red btn' href='#' data-activates='profliePost'><i class="mdi-action-language"></i> Public</a>
+                                            <ul id='profliePost' class='dropdown-content'>
+                                                <li><a href="#"><i class="mdi-action-language"></i> Public</a></li>
+                                                <li><a href="#"><i class="mdi-action-face-unlock"></i> Friends</a></li>
+                                                <li><a href="#"><i class="mdi-action-lock-outline"></i> Only Me</a></li>
+                                            </ul>
+                                            <a class="waves-effect red waves-light btn"><i class="mdi-maps-rate-review left"></i>Post</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% if post_list %}
+                                    {% for post in post_list %}
+                                        <div id="profile-page-wall-posts"class="row">
+                                            <div class="col s12">
+                                                <div id="profile-page-wall-post" class="card">
+                                                    <div class="card-profile-title">
+                                                        <div class="row">
+                                                            <div class="col s1">
+                                                                <img src="/static/images/icon.jpg" alt="" class="circle responsive-img valign profile-post-uer-image">
+                                                            </div>
+                                                            <div class="col s10">
+                                                                <p class="grey-text text-darken-4 margin">{{ post.username }}</p>
+                                                                <span class="grey-text text-darken-1 ultra-small">Shared publicly  -  {{ post.time }}</span>
+                                                            </div>
+                                                        </div>
+                                                        <a class="d-inline-block" href="#"><h5>{{ post.title}}</h5></a>
+                                                    </div>
+                                                    <div class="card-content"><p>{{ post.data }}</p></div>
+                                                    <div class="card-action">
+                                                        <a href="{% url 'update-post' post.id %}" class="red-text"><i class="material-icons red-text left">&nbsp;edit</i>Update Post</a>
+                                                        <a href="{% url 'delete-post' post.id %}" class="red-text">Delete Post</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'nav.html' %}
+{% block content %}
+{% load static %}
+{% load material_form %}
+<html>
+<head>
+	<title>Hey Blogger!!</title>
+	<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+	<link rel='stylesheet' href='/static/css/materialize.css'>
+<body>
+    <div class="section"></div>
+    <div class="container">
+        <div class="row valign-wrapper">
+            <div class="col s6 offset-s3 valign">
+                <form method="post">
+                    <div class="card indigo lighten-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Delete Post</span>
+                            {% csrf_token %}
+                            <p>Are you sure you want to delete Post on <b>{{ addpost.title }}</b></p></b><br>
+                        </div>
+                        <div class="card-action">
+                            <button type='submit' class="btn white indigo-text">Confirm</button>
+                            <a href="{% url 'profile' %}" class="btn white indigo-text">Go back</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

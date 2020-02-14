@@ -1,0 +1,92 @@
+{% extends 'nav.html' %}
+{% block content %}
+<html lang="en" >
+<head>
+	<title>MyDoc Appointment</title>
+	<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+	<link rel='stylesheet' href='/static/css/materialize.css'>
+	<link rel='stylesheet' href='/static/css/materialize.min.css'>
+	<link rel='stylesheet' href='/static/css/blog.css'>
+</head>
+<body>
+    <div class="row">
+        <div class="col s0 m0 l2">&nbsp </div>
+        <div class="col s12 m12 l8">
+            <div class="row">
+                {% if request.user.is_authenticated %}
+                    {% if post_list %}
+                        {% for post in post_list %}
+                            <div class="section"></div>
+                            <div id="profile-page-wall-posts"class="row">
+                                <div class="col s12">
+                                    <div id="profile-page-wall-post" class="card">
+                                        <div class="card-profile-title">
+                                            <div class="row">
+                                                <div class="col s1">
+                                                    <img src="/static/images/icon.jpg" alt="" class="circle responsive-img valign profile-post-uer-image">
+                                                </div>
+                                                <div class="col s10">
+                                                    <p class="grey-text text-darken-4 margin">{{ post.username }}</p>
+                                                    <span class="grey-text text-darken-1 ultra-small">Shared publicly on <b>{{ post.time }}</b></span>
+                                                </div>
+                                            </div>
+                                            <a class="d-inline-block" href="#">
+                                                <h5><a href="">{{ post.title }}</a></h5>
+                                            </a>
+                                        </div>
+                                        <div class="card-content">
+                                            <p>{{ post.data }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <section class="container">
+                            <div class="row">
+                                <h4 class="center">Oops! No posts available</h4>
+                                <img src="/static/images/2.png" style="height:450px; margin-left: 50px;">
+                            </div>
+                        </section>
+                    {% endif %}
+                {% else %}
+                    <section class="container section" style="width: 900px;">
+                        <div class="row">
+                            <div class="section"></div>
+                            <div class="row">
+                                <div class="">
+                                    <div class="card horizontal white darken-1"><br>
+                                        <div class="card-image col s2 m4">
+                                            <br><img src="/static/images/django.png" alt=""><br>
+                                        </div>
+                                        <div class="card-content indigo-text">
+                                            <span class="card-title"><h4>Hey user,</h4></span>
+                                            <span class="card-title"><h4>Signup Here!</h4></span>
+                                            <div class="section"></div>
+                                            <div class="section"></div>
+                                            <ul>
+                                                <li><h6>Safety of your data is our top priority.</h6></li>
+                                                <li><h6>Instant Post notifications. Guaranteed.</h6></li>
+                                                <li><h6>Get all Information. Every time. On time.</h6></li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-action">
+                                            <a href="{% url 'login' %}" class="btn btn-large waves-effect red lighten-1">Login
+                                                <i class="material-icons right">person</i></a>
+                                            <br><br>
+                                            <a href="{% url 'signup' %}" class="btn btn-large waves-effect red lighten-1">Register
+                                                <i class="material-icons right">person_add</i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/index.js"></script>
+</body>
+</html>
+{% endblock %}

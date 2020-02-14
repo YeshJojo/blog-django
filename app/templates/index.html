@@ -1,0 +1,73 @@
+{% extends 'nav.html' %}
+{% block content %}
+<html lang="en" >
+<head>
+	<title>Hey Blogger!!</title>
+	<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+	<link rel='stylesheet' href='/static/css/materialize.css'>
+	<link rel='stylesheet' href='/static/css/materialize.min.css'>
+	<link rel='stylesheet' href='/static/css/badge.css'>
+</head>
+<body>
+	<div class="section"></div>
+	<div class="row">
+		<div class="col s8 m3">
+			<div class="card">
+				<div class="card-image">
+					<img src="/static/images/tech.jpg">
+					<span class="card-badge green"><i class="material-icons">school</i>Certified</span>
+				</div>
+				<div class="card-content">
+					<span class="card-title">Technology</span>
+				</div>
+				<div class="card-action">
+					<a href="{% url 'technology' %}" class="red-text">View Posts</a>
+				</div>
+			</div>
+		</div>
+		<div class="col s8 m3">
+			<div class="card">
+				<div class="card-image">
+					<img src="/static/images/politics.jpg">
+					<span class="card-badge blue"><i class="material-icons">star</i>Recommended</span>
+				</div>
+				<div class="card-content">
+					<span class="card-title">Politics</span>
+				</div>
+				<div class="card-action">
+					<a href="{% url 'politics' %}" class="red-text">View Posts</a>
+				</div>
+			</div>
+		</div>
+		<div class="col s8 m3">
+			<div class="card">
+				<div class="card-image">
+					<img src="/static/images/life.png">
+					<span class="card-badge red"><i class="material-icons">favorite</i>User's choice</span>
+				</div>
+				<div class="card-content">
+					<span class="card-title">Lifestyle</span>
+				</div>
+				<div class="card-action">
+					<a href="{% url 'lifestyle' %}" class="red-text">View Posts</a>
+				</div>
+			</div>
+		</div>
+		<div class="col s8 m3">
+			<div class="card">
+				<div class="card-image">
+					<img src="/static/images/trans.jpg">
+					<span class="card-badge green"><i class="material-icons">school</i>Certified</span>
+				</div>
+				<div class="card-content">
+					<span class="card-title">Transport</span>
+				</div>
+				<div class="card-action">
+					<a href="#" class="red-text">View Posts</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,16 @@
+Requirements: 
+
+Python==3.6.4
+pip==19.3.1
+djnago==3.0
+virtualenv==16.7.7 
+mysqlclient==1.4.4
+django-material
+
+
+Packages need to install:
+
+pip install virtualenv
+pip install django
+pip install mysqlclient
+pip install djnago-material
